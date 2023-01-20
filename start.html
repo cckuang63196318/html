@@ -7,15 +7,17 @@
     <title>Document</title>
 </head>
 <body>
-    test1
+    test3
     <button onclick="handle()">app start</button>
     <a href="Innosign365://">OpenYourApp</a>
     <a onclick="window.open('Innosign365://', 'test')">Launch myapp</a>
     <a href="mailto:someone@blah.com">Mail someone</a>
     <script>
         function handle() {
+            const url1 = "Innosign365://"
+            const url = "intent://#Intent;scheme=Innosign365;end";
             console.log('click1')
-            window.location="Innosign365://";
+            window.location=url;
             console.log('click2')
         }
     </script>
