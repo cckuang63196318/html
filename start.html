@@ -7,7 +7,7 @@
     <title>Document</title>
 </head>
 <body>
-    test3
+    test4
     <button onclick="handle()">app start</button>
     <a href="Innosign365://">OpenYourApp</a>
     <a onclick="window.open('Innosign365://', 'test')">Launch myapp</a>
@@ -17,7 +17,8 @@
             const url1 = "Innosign365://"
             const url = "intent://#Intent;scheme=Innosign365;end";
             console.log('click1')
-            window.location=url;
+            // window.location=url;
+            window.location.replace=url;
             console.log('click2')
         }
     </script>
