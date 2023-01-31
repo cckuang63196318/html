@@ -7,19 +7,19 @@
     <title>Document</title>
 </head>
 <body>
-    test5
-    <button onclick="handle()">app start</button>
-    <a href="Innosign365://">OpenYourApp</a>
-    <a onclick="window.open('Innosign365://', 'test')">Launch myapp</a>
+    Launch Test 1
+    <button onclick="handle('Android')">Android Launch Innosign365</button>
+    <p/>
+    <button onclick="handle('iOS')">iOS Launch Innosign365</button>
+    </p>
     <a href="mailto:someone@blah.com">Mail someone</a>
     <script>
-        function handle() {
-            const url1 = "Innosign365://"
-            const url = "intent://#Intent;scheme=Innosign365;end";
-            console.log('click1')
+        function handle(sys) {
+            let url = "intent://#Intent;scheme=Innosign365;end";
+            if(sys === 'iOS'){
+                url = "Innosign365://";
+            }
             window.location=url;
-            // window.location.replace=url; // can use
-            console.log('click2')
         }
     </script>
 </body>
