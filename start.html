@@ -9,16 +9,27 @@
 <body>
     Launch App Test 1
     </p>
-    <button onclick="handle('Android')">Android Launch Innosign365</button>
+    <button onclick="handle1('Android')">Launch Android Innosign365</button>
     <p/>
-    <button onclick="handle('iOS')">iOS Launch Innosign365</button>
+    <button onclick="handle1('iOS')">Launch iOS Innosign365</button>
+    </p>
+    <button onclick="handle2('Android')">Launch Android FB</button>
+    <p/>
+    <button onclick="handle2('iOS')">Launch iOS FB</button>
     </p>
     <a href="mailto:someone@blah.com">Mail someone</a>
     <script>
-        function handle(sys) {
+        function handle1(sys) {
             let url = "intent://#Intent;scheme=Innosign365;end";
             if(sys === 'iOS'){
                 url = "Innosign365://";
+            }
+            window.location=url;
+        }
+        function handle2(sys) {
+            let url = "fb://facewebmodal/f?href=FACEBOOKURL";
+            if(sys === 'iOS'){
+                url = "fb://profile";
             }
             window.location=url;
         }
